@@ -1,0 +1,349 @@
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style type="text/css">
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #109177;
+}
+</style>
+
+</head>
+<body>
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend><span class="number">1</span>LOCATION DETAILS</legend>
+<label for="job">CITY:</label>
+<select id="job" name="field4">
+  <option value="">---SELECT---</option>
+  <option value="AJMER">AJMER</option>
+  <option value="BANGALORE">BANGALORE</option>
+  <option value="CHENNAI">CHENNAI</option>
+  <option value="DELHI">DELHI</option>
+  <option value="DHARMAPURI">DHARMAPURI</option>
+  <option value="FARIDABAD">FARIDABAD</option>
+  <option value="GUDIYATHAM">GUDIYATHAM</option>
+  <option value="JAIPUR">JAIPUR</option>
+  <option value="KRISHNAGIRI">KRISHNAGIRI</option>
+  <option value="LUCKNOW">LUCKNOW</option>
+  <option value="MUMBAI-MALAD">MUMBAI-MALAD</option>
+  <option value="MUMBAI-THANE">MUMBAI-THANE</option>
+  <option value="PATIALA">PATIALA</option>
+  <option value="PUNE-CORP">PUNE-CORP</option>
+  <option value="PUNE-HADAPSAR">PUNE-HADAPSAR</option>
+  <option value="PUNE-NIGDI">PUNE-NIGDI</option>
+  <option value="SALEM">SALEM</option>
+  <option value="TRICHY">TRICHY</option>
+  <option value="VELLORE">VELLORE</option>
+</select>
+<legend><span class="number">2</span>BIKE DETAILS</legend>
+<label for="job">BRAND:</label>
+<select id="brand" name="brand" onchange="brand1(this)">
+  <option value="">---SELECT---</option>
+  <option value="TVS">TVS</option>
+  <option value="BAJAJ">BAJAJ</option>
+  <option value="HONDA">HONDA</option>
+  <option value="HERO">HERO</option>
+  <option value="YAMAHA">YAMAHA</option>
+  <option value="PIAGGIO">PIAGGIO</option>
+  <option value="ROYAL ENFIELD">ROYAL ENFIELD</option>
+  <option value="SUZUKI">SUZUKI</option>
+  </select>
+<label for="job">BIKES:</label>
+<select id="bike" name="bike">
+  <option value="">---SELECT---</option>
+<script type="text/javascript">
+function brand1(x){
+var a=document.getElementById("bike");
+a.options.length=0;
+a.disabled=false;
+switch(x.value){
+case "TVS":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("WEGO"));
+	a.options.add(new Option("SCOOTY PEP"));
+	a.options.add(new Option("STAR CITY"));
+	a.options.add(new Option("APACHE RTR 160"));
+
+	break;
+case "BAJAJ":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("AVENGER"));
+	a.options.add(new Option("DISCOVER"));
+	a.options.add(new Option("PLATINA"));
+	a.options.add(new Option("PULSAR"));
+
+	break;
+case "HONDA":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("ACTIVA"));
+	a.options.add(new Option("DIO"));
+	a.options.add(new Option("CD DREAM"));
+	a.options.add(new Option("AVIATOR"));
+	break;
+case "HERO":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("DUET VX"));
+	a.options.add(new Option("MAESTRO"));
+	a.options.add(new Option("PASSION PRO"));
+	a.options.add(new Option("SPL SMART"));
+	break;
+case "YAMAHA":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("RAYZ 113"));
+	a.options.add(new Option("SALUTO"));
+	a.options.add(new Option("FASCINO"));
+	a.options.add(new Option("FZ 16"));
+	break;
+case "PIAGGIO":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("APRILA 150"));
+	a.options.add(new Option("VXL 125"));
+	a.options.add(new Option("SXL 125"));
+	a.options.add(new Option("MATT RED 150"));
+	break;
+case "ROYAL ENFIELD":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("STANDARD"));
+	a.options.add(new Option("CLASSIC 350"));
+	a.options.add(new Option("HIMALAYAN"));
+	a.options.add(new Option("THUNDERBIRD"));
+	break;
+case "SUZUKI":
+	a.options.add(new Option("---SELECT---"));
+	a.options.add(new Option("ACCESS"));
+	a.options.add(new Option("GIXER SF"));
+	a.options.add(new Option("LETS"));
+	break;
+}
+}
+</script>
+  </select>
+<label for="job">2-WHEELER PRICE:</label>
+<input type="text" name="field1" placeholder="2-WHEELER PRICE" disabled="disabled">
+<label for="job">FINANCE REQUIRED:</label>
+<input type="text" name="fr" id="fr" placeholder="FINANCE REQUIRED">
+<legend><span class="number">3</span>PERSONAL INFO</legend>
+<label for="job">DOB:</label>
+<input type="date" name="dob" onchange="getAge()" id="dob1">
+<script type="text/javascript">
+function getAge() {
+	var dateString=document.getElementById("dob1").value;
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+	return age;
+	}
+	
+function myFunction(){
+var age=getAge();
+var age_r=0;
+if(age>=18 && age<=21)
+	age_r=3;
+if(age>=22 && age<=50)
+	age_r=10;
+if(age>=51 && age<=60)
+	age_r=5;
+	
+	age_r=age_r*0.05;
+
+	var rt=(document.getElementById("res").value)*0.2;
+	var et=(document.getElementById("emp").value)*0.2;
+
+var mi=(document.getElementById("inc").value)*0.6;
+var mi_r;	
+if(mi>50000)
+	mi_r=10;
+if(mi>=35000 && mi<=50000)
+	mi_r=8;
+if(mi>=20000 && mi<35000)
+	mi_r=6;
+if(mi>=10000 && mi<20000)
+	mi_r=4;
+if(mi>=5100 && mi<10000)
+	mi_r=3;
+if(mi<5100)
+	mi_r=0;
+mi_r=mi_r*0.3;
+var check=0;
+if(document.getElementById("myCheck").checked == true)	
+	check=1.5;
+var score=check+mi_r+et+rt+age_r;
+var roi=26-(0.3*score);
+var fr=document.getElementById("fr").value;
+var t=document.getElementById("tenure").value;
+var emi=Math.round((((parseInt(roi)/1200)*parseInt(fr))*(Math.pow(1+(parseInt(roi)/1200),parseInt(t))))/((Math.pow(1+(parseInt(roi)/1200),parseInt(t)))-1));
+document.getElementById("display").innerHTML="EMI for your Finance Required is:Rs."+emi;
+document.getElementById("display2").innerHTML="*Processing fee 2.4 to 4%";
+	}
+
+</script>
+
+<label for="job">HAS INCOME DOCS:</label>
+<select id="job" name="field4">
+  <option value="">---SELECT---</option>
+  <option value="1">YES</option>
+  <option value="0">NO</option>
+ </select>
+<label for="job">RESIDENCE TYPE:</label>
+<select name="field4" id="res">
+  <option value="">---SELECT---</option>
+  <option value="10">OWNED BY SELF</option>
+  <option value="8">OWNED BY PARENTS</option>
+  <option value="6">RENTED WITH FAMILY</option>
+  <option value="5">RENTED WITH FRIENDS</option>
+  <option value="4">RENTED, STAYING ALONE</option>
+  <option value="3">PG</option>
+  <option value="2">HOSTEL</option>
+  <option value="2">ACCOMODATION PROVIDED BY COMPANY</option>
+  </select>
+<label for="job">EMPLOYMENT TYPE:</label>
+<select name="field4" id="emp">
+  <option value="">---SELECT---</option>
+  <option value="10">SALARIED</option>
+  <option value="9">PENSIONEER</option>
+  <option value="7">SELF EMPLOYED PROFESSIONAL</option>
+  <option value="6">SELF EMPLOYED NON-PROFESSIONAL</option>
+  <option value="7">NON-INDIVIDUAL</option>
+  <option value="5">AGRICULTURIST</option>
+  <option value="3">STUDENT</option>
+  <option value="3">HOUSEWIFE</option>
+  </select>
+  
+  
+
+<input type="checkbox" class="maxtickets_enable_cb" name="opwp_wootickets[tickets][0][enable]" id="myCheck">HAS TAKEN LOAN BEFORE:
+			<div class="max_tickets">
+			<label for="job">LOAN APPLICATION NUMBER:</label>
+				<input type="text" name="opwp_wootickets[tickets][0][maxtickets]"></div><br><br>
+
+<script>
+jQuery(document).ready(function($) {
+   // STOCK OPTIONS
+	$('input.maxtickets_enable_cb').change(function(){
+		if ($(this).is(':checked'))
+    $(this).next('div.max_tickets').show();
+else
+    $(this).next('div.max_tickets').hide();
+	}).change();
+});
+
+
+		</script>
+
+<label for="job">MONTHLY INCOME:</label>
+<input type="text" name="field2" placeholder="MONTHLY INCOME" id="inc">
+<label for="job">TENURE for EMI:</label>
+<input type="text" placeholder="Tenure in months" name="tenure" id="tenure">     
+</fieldset>
+<input type="button" value="CHECK ELIGIBILITY" onclick="myFunction();">
+<label for="job"><span name="display" id="display"></span></label>
+<p><font color="red"><span name="display2" id="display2"></span></font></p>
+</form>
+</div>
+</body></html>
